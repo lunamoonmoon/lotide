@@ -1,12 +1,3 @@
-//function implementation
-const assertEqual = function(actual, expected) {
-  if(actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);    
-}
-};
-
 function eqArrays(oneArray, twoArray) { //create function
   if(oneArray.length !== twoArray.length) { //if array lengths are unequal
     console.log(`🛑🛑🛑 Assertion Failed: ${oneArray} !== ${twoArray}`); //fail arrays are not equal
@@ -22,6 +13,18 @@ function eqArrays(oneArray, twoArray) { //create function
     return true
   }
 }
+
+//function implementation
+const assertArraysEqual = function(actual, expected) {
+  if(eqArrays(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);    
+}
+};
+
+assertArraysEqual(["Lighthouse Labs", "Bootcamp"], ["Lighthouse Labs", "Bootcamp"]);
+
 
 function without(source, itemsToRemove) {
   const withoutArray = source; //declare new array

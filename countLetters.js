@@ -1,12 +1,3 @@
-//function implementation
-const assertEqual = function(actual, expected) {
-  if(actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);    
-}
-};
-
 function countLetters(sentence) {
   let count = {}; //declare object
   sentence = sentence.toLowerCase();
@@ -21,5 +12,4 @@ function countLetters(sentence) {
   return count; //return count object of each letter and how many times it appears in input sentence
 }
 
-//test
-console.log(countLetters("Lil Labs"))
+module.exports = countLetters;

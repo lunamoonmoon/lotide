@@ -10,7 +10,6 @@ function countOnly(allItems, itemsToCount) {
     }
   }
   return results;
-}
-
+};
 
 module.exports = countOnly;

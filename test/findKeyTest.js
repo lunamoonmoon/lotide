@@ -1,4 +1,5 @@
 const assert = require('chai').assert;
+const findKey = require('../findKey');
 
 let starGazer = findKey({
   "Blue Hill": { stars: 1 },

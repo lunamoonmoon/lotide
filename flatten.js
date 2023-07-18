@@ -1,16 +1,12 @@
 function flatten(array) {
-  let flatArray = [];
-  for(let i = 0; i < array.length; i++) {
-    if(Array.isArray(array[i]) === true) {
-      let x = array[i];
-      for(let j = 0; j < x.length;j++) {
-        flatArray.push(array[i][j]);
-      }
+  let flatArray = []; //new var
+  for (let i = 0; i < array.length; i++) { //loop array
+    if (!Array.isArray(array[i])) { //if index of array is not an array
+      flatArray.push(array[i]); //if index is flat push to flatArray
     } else {
-      flatArray.push(array[i]);
+      flatArray = flatArray.concat(flatten(array[i])); //call own function for recursion in case of multiple nested arrays then add to flatarray
     }
   }
-  console.log(flatArray);
   return flatArray;
 }
 
